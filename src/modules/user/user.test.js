@@ -18,15 +18,15 @@ import mongoose from "mongoose"
 // })
 
 describe("add user",()=>{
-//  it("should add user", async()=>{
-//     const res = await request(app).post("/add_user").send({
-//         name:"test",
-//         email:"test@gmail.com",
-//         password:"123123"
-//     })
-//     expect(res.status).toBe(200)
-//     expect(res.body.success).toBe(true)
-//  }),
+ it("should add user", async()=>{
+    const res = await request(app).post("/add_user").send({
+        name:"test",
+        email:"test@gmail.com",
+        password:"123123"
+    })
+    expect(res.status).toBe(200)
+    expect(res.body.success).toBe(true)
+ }),
  it("should return error user exist",async()=>{
     const res = await request(app).post("/add_user").send({
         name:"test",

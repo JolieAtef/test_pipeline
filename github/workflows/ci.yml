@@ -7,7 +7,7 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     services:
       mongo:
@@ -31,7 +31,7 @@ jobs:
         run: npm run test
 
       - name: Start server
-        run: npm run start:dev &
+        run: npm run start
       
       - name: Wait for server to start
         run: sleep 5
